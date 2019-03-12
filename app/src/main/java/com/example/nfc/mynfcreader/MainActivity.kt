@@ -18,8 +18,7 @@ import android.nfc.NdefMessage
 import android.nfc.NdefRecord
 import android.os.Parcelable
 import android.util.Log;
-
-
+import com.example.nfc.mynfcreader.model.ScannedCard
 
 
 class MainActivity : Activity() {
@@ -77,6 +76,7 @@ class MainActivity : Activity() {
     private fun dumpTagData(tag: Tag): String {
         val sb = StringBuilder()
         val id = tag.getId()
+
         sb.append("ID (hex): ").append(Utils.toHex(id)).append('\n')
         sb.append("ID (reversed hex): ").append(Utils.toReversedHex(id)).append('\n')
         sb.append("ID (dec): ").append(Utils.toDec(id)).append('\n')
